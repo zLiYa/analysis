@@ -1,14 +1,13 @@
-﻿using System.Configuration;
+﻿using Prism.Unity;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
 namespace AnalysisTools
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
+    public partial class App
     {
+
     }
 
 }

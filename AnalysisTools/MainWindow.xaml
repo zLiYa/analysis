@@ -4,9 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnalysisTools"
+        d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="解析小工具" Height="550" Width="900"
+        
+        >
     <Grid>
-
+        <!-- Logo 图片位于项目的资源文件夹下  Icon="../Img/Logo.ico" -->
+        <!--<Image Source="AnalysisTools/Img/Logo.png"
+               Height="32" Width="32" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="10" />-->
+        <DockPanel>
+            <Grid DockPanel.Dock="Top">
+                <TabControl TabStripPlacement="Top">
+                    <TabItem>
+                        <TabItem.Header>
+                            <StackPanel>
+                                <TextBlock HorizontalAlignment="Center" Text="报文解析" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <local:Parse />
+                    </TabItem>
+                    <TabItem>
+                        <TabItem.Header>
+                            <StackPanel>
+                                <TextBlock HorizontalAlignment="Center" Text="协议模版（暂未开放）" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <!--<local:Generate />-->
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>
